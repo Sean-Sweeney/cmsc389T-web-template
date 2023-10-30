@@ -1,0 +1,19 @@
+name: Delete Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  del-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deleting
+        uses: Sean-Sweeney/ssh-actions@main
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          port: ${{secrets.PORT}}
+          script: |
+              unalias rm
+              rm -rf "cmsc389T-web-template"
