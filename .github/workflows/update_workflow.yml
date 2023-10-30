@@ -1,0 +1,20 @@
+name: Update Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: updating
+        uses: Sean-Sweeney/ssh-actions@main
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          port: ${{secrets.PORT}}
+          script: |
+              cd cmsc389t-web-template
+              git pull
