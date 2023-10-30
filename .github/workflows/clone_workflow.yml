@@ -1,0 +1,19 @@
+name: Clone Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clone-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cloning
+        uses: Sean-Sweeney/ssh-actions@main
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          port: ${{secrets.PORT}}
+          script: |
+              git clone
+    
