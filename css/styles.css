@@ -103,8 +103,6 @@ a:active {
   color: white;
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -112,6 +110,10 @@ html {
 h1 {
   font-size: 60px;
   margin: 0;
+}
+
+#bike {
+  color: aquamarine;
 }
 
 #image {
@@ -248,7 +250,7 @@ h3 {
 
 /* Style all font awesome icons */
 .fa {
-  margin-left: 80%;
+  /* margin-left: 80%; */
   font-size: 80%;
   width: 50px;
   text-align: center;
